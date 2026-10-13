@@ -1,6 +1,6 @@
 'use strict';
 // Profile schema numbers are independent from the public product version.
-window.AEREN_RELEASE={gameVersion:'1.0.0',saveSchemaVersion:3,contentVersion:'2026-10-13',buildId:'2026-10-13-rc2',channel:'release-candidate',development:false};
+window.AEREN_RELEASE={gameVersion:'1.0.0',saveSchemaVersion:3,contentVersion:'2026-10-13',buildId:'2026-10-13-rc2-en',channel:'release-candidate',development:false};
 (function(){
  const keys=['aeren.save.v1','aeren.meta.v2','aeren.meta.v3','aeren.run.v2'],backup='aeren.backup.pre-1.0.0',journal='aeren.transaction.1',object=x=>x&&typeof x==='object'&&!Array.isArray(x);
  const capture=()=>Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)]));
@@ -17,7 +17,7 @@ window.AEREN_RELEASE={gameVersion:'1.0.0',saveSchemaVersion:3,contentVersion:'20
   en:{title:'Your save cannot be loaded safely',intro:'Your data has been preserved. You can retry, export it or restore a backup.',retry:'Try again',export:'Export save',restore:'Restore backup',create:'Create new profile',missing:'No valid backup is available to restore.',confirm:'Create a new profile? Your current data will be kept as a recovery backup.',storage:'Storage is unavailable. Export your save first.',language:'Language'},
   de:{title:'Dein Spielstand kann nicht sicher geladen werden',intro:'Deine Daten bleiben erhalten. Versuche es erneut, exportiere sie oder stelle eine Sicherung wieder her.',retry:'Erneut versuchen',export:'Spielstand exportieren',restore:'Sicherung wiederherstellen',create:'Neues Profil erstellen',missing:'Keine gültige Sicherung zum Wiederherstellen vorhanden.',confirm:'Neues Profil erstellen? Deine bisherigen Daten werden als Sicherung aufbewahrt.',storage:'Der Speicher ist nicht verfügbar. Exportiere zuerst deinen Spielstand.',language:'Sprache'}
  };
- function recoveryLanguage(){for(const get of [()=>localStorage.getItem('aeren.recovery.language'),()=>JSON.parse(localStorage.getItem(keys[0]))?.settings?.language,()=>JSON.parse(JSON.parse(localStorage.getItem(backup))?.[keys[0]]||'null')?.settings?.language,()=>navigator.language.slice(0,2)])try{const lang=get();if(recoveryTexts[lang])return lang;}catch(e){}return 'pl';}
+ function recoveryLanguage(){for(const get of [()=>localStorage.getItem('aeren.recovery.language'),()=>JSON.parse(localStorage.getItem(keys[0]))?.settings?.language,()=>JSON.parse(JSON.parse(localStorage.getItem(backup))?.[keys[0]]||'null')?.settings?.language,()=>navigator.language.slice(0,2)])try{const lang=get();if(recoveryTexts[lang])return lang;}catch(e){}return 'en';}
  function recovery(lang=recoveryLanguage()){
   const t=recoveryTexts[lang]||recoveryTexts.pl,overlay=document.getElementById('overlay');document.documentElement.lang=lang;
   overlay.innerHTML='<main class="panel"><h1>'+t.title+'</h1><p>'+t.intro+'</p><label>'+t.language+' <select id="recovery-language">'+[['pl','Polski'],['en','English'],['de','Deutsch']].map(([id,name])=>'<option value="'+id+'" '+(id===lang?'selected':'')+'>'+name+'</option>').join('')+'</select></label><div class="actions">'+[['retry',t.retry],['export',t.export],['restore',t.restore],['new',t.create]].map(([id,label])=>'<button class="btn" id="'+id+'-save">'+label+'</button>').join('')+'</div><p id="save-message" role="status"></p></main>';

@@ -1,5 +1,5 @@
-# Grafiki prezentacyjne
+# Showcase images
 
-W docs/assets znajdują się zrzuty rzeczywistego buildu 1.0.0 RC2: sześć map, walka ze strażnikiem, wybór umiejętności, wybór broni, przygotowanie wyprawy oraz Pamiątki. Rozdzielczość 1600 × 900, JPEG. Nie generowano fikcyjnych scen ani nie poprawiano wyglądu gry na obrazach.
+docs/assets contains 1600 × 900 JPEG screenshots of the real RC2 game: six worlds, a guardian fight, ability selection, weapon selection, run preparation and Keepsakes. The game was set to English before capture.
 
-Sceny walki, wyposażenie i oferty kart ustawiono na potrzeby prezentacji w izolowanym profilu. Są to materiały demonstracyjne, nie dowód naturalnego uzyskania danego buildu lub ukończenia poziomu. Brak danych prywatnego gracza.
+Combat scenes, equipment and card offers were staged in an isolated profile. These are demonstrations, not evidence of naturally obtaining a build or completing a level. No private player data was used, and no fictional gameplay art was generated.

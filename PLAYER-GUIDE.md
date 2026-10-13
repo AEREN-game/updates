@@ -1,47 +1,45 @@
-# Jak zacząć
+# Getting started
 
 ## Windows
 
-1. Pobierz AEREN-1.0.0-Windows-x64.zip.
-2. Rozpakuj cały ZIP do osobnego folderu. Nie uruchamiaj gry wewnątrz archiwum.
-3. Otwórz AEREN.exe.
+Download AEREN-1.0.0-Windows-x64.zip, extract the entire archive into a new folder and launch AEREN.exe. Do not run it from inside the ZIP.
 
-Windows 10/11 x64, .NET Framework 4.6.2 lub nowszy oraz Microsoft Edge WebView2 Runtime. EXE nie jest podpisany cyfrowo. Nie wyłączaj zabezpieczeń systemu; sprawdź źródło i sumę SHA-256 przed uruchomieniem.
+Requires Windows 10/11 x64, .NET Framework 4.6.2 or later, and Microsoft Edge WebView2 Runtime. The EXE is unsigned. Verify its source and SHA-256 checksum; do not disable system protections.
 
-EXE zawiera pliki gry i lokalnie przygotowuje potrzebne składniki. Mała liczba plików obok programu jest zamierzona. Zapis znajduje się w %LOCALAPPDATA%\Aeren, a nie w katalogu instalacyjnym.
+The EXE embeds the game and prepares its local components. Saves are stored under %LOCALAPPDATA%\Aeren, not in the installation folder.
 
-## Przeglądarka
+## Browser
 
-Otwórz stronę gry i wybierz „Zagraj w przeglądarce”. Zalecany aktualny Edge lub Chrome na komputerze, klawiatura i mysz. Telefon może służyć do przeglądania strony, ale sterowanie gry wymaga komputera. Zalecane okno co najmniej 1280 × 720; testowano również 800 × 600. Minimalne CPU i RAM nie są jeszcze określone.
+Select “Play in your browser” on the website. Use a current Edge or Chrome on a computer with a keyboard and mouse. The website works on phones; game controls require a computer. Recommended window: 1280 × 720 or larger. 800 × 600 was also tested. Minimum CPU/RAM requirements have not yet been established.
 
-## Sterowanie domyślne
+## Controls
 
-| Czynność | Klawisz |
+| Action | Default input |
 |---|---|
-| Ruch | WASD |
-| Celowanie | Mysz |
-| Umiejętności | Q / E / R |
-| Zdolność bohatera | PPM |
-| Moc bohatera | F |
-| Unik | Spacja |
-| Mikstura | V |
-| Interakcja | C |
-| Ekwipunek | TAB |
-| Pauza | Esc |
-| Pełny ekran | F11 |
+| Move | WASD |
+| Aim | Mouse |
+| Abilities | Q / E / R |
+| Hero ability | Right mouse button |
+| Ultimate | F |
+| Dodge | Space |
+| Potion | V |
+| Interact | C |
+| Equipment | Tab |
+| Pause | Esc |
+| Full screen | F11 |
 
-Atak automatyczny jest domyślnie włączony. Przypisania klawiszy oraz autocelowanie zmienisz w ustawieniach. Menu obsługuje strzałki i Enter. Kontroler jest eksperymentalny.
+Automatic attacks are enabled by default. Customize bindings and auto-aim in Settings. Use arrow keys and Enter in menus. Controller support is experimental.
 
-## Pierwsza wyprawa
+## Your first run
 
-Wybierz dostępnego bohatera i poziom trudności. Zbieraj doświadczenie, unikaj oznaczonych ataków i szukaj obiektów do interakcji. Przy awansie wybierz umiejętność, a potem wyposażenie. Bronie zajmują maksymalnie trzy miejsca razem z bronią startową; pasywne przedmioty mają sześć miejsc. Sklepy wyposażenia pojawiają się po rundach. Złoto wyprawy jest osobne od stałych walut konta.
+Choose an available hero and difficulty. Collect experience, avoid marked attacks and explore interactable objects. On level-up, choose an ability, then equipment. Weapons have three slots including your starting weapon; passive items have six slots. Equipment shops appear after rounds. Run gold is separate from permanent account currencies.
 
-## Zapis i aktualizacja
+## Language and saves
 
-Przed aktualizacją: Ustawienia → Kopia profilu. Po zamknięciu Windows można dodatkowo skopiować folder %LOCALAPPDATA%\Aeren. Instaluj nową wersję w osobnym folderze. Nie usuwaj starego profilu, żeby „zresetować” instalację.
+New profiles start in English. Existing profiles keep their selected language. Change it in Settings. Before updating, use Settings → Export profile backup. On Windows, you can also copy %LOCALAPPDATA%\Aeren after closing the game. Install updates into a separate folder.
 
-W przeglądarce zapis należy do adresu strony. Windows, podgląd lokalny i GitHub Pages nie współdzielą automatycznie postępu. Czyszczenie danych przeglądarki może usunąć zapis. Automatyczny updater jest w tym wydaniu wyłączony.
+Browser saves belong to the website origin. Windows, local previews and GitHub Pages do not automatically share progress. Clearing browser data can delete saves. Automatic updates are disabled in this release.
 
-## Zgłoszenie błędu
+## Report a problem
 
-Podaj wersję, bohatera, mapę, kroki odtworzenia i oczekiwany wynik. Dołącz zrzut oraz opcjonalny raport z Ustawienia → Raport diagnostyczny. Nie publikuj całego prywatnego profilu.
+Include your build, hero, map, reproduction steps and expected result. Optionally attach a screenshot and Settings → Diagnostic report. Do not publish your private profile.

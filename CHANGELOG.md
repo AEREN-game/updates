@@ -1,11 +1,8 @@
-# AEREN 1.0.0 RC2
+# AEREN 1.0.0 RC2 — English distribution
 
-Build: 2026-10-13-rc2. Numer publiczny 1.0.0 jest niezależny od schematów starszych zapisów 2.x.
+- English showcase website, repository documentation and release description.
+- English screenshots captured from the actual game.
+- English defaults for new profiles; existing language preferences preserved.
+- Existing RC2 fixes: settings focus/scroll preservation, recovery/help messages, safe save handling and disabled unfinished auto-updater.
 
-- Poprawiono utrzymanie przewijania i fokusu po zmianie ustawienia.
-- Dodano tłumaczenia nowych komunikatów pomocy i odzyskiwania w PL/EN/DE.
-- Przygotowano czyste paczki Windows i Web, odzyskiwanie profilu oraz kopię przed migracją.
-- Wyłączono debugowanie w interfejsie oraz niegotowy automatyczny updater.
-- Zachowano dotychczasowe systemy rozgrywki, sklepy po rundach i indywidualne efekty audio.
-
-Strona prezentacyjna i materiały GitHub są osobnym dodatkiem. Nie zmieniają mechanik ani zawartości sprawdzonych paczek RC2.
+The public version remains 1.0.0. The English distribution uses build 2026-10-13-rc2-en. Save schemas are unchanged. This is still a release candidate.

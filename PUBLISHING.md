@@ -1,29 +1,29 @@
-# Publikacja — AEREN-game/updates
+# Publishing to AEREN-game/updates
 
-Ta paczka została przygotowana lokalnie. Nic nie zostało wysłane do GitHuba.
+Everything was prepared locally. Nothing has been uploaded.
 
-## 1. Pliki repozytorium
+## 1. Repository files
 
-Przed zmianą istniejącego repozytorium zachowaj jego aktualną zawartość. Dodaj **zawartość folderu repository**, nie nadrzędny folder github-ready. Nie kasuj istniejących manifestów aktualizacji ani starych wydań. Przy kolizji nazw przejrzyj różnice przed zastąpieniem. Ta paczka nie włącza automatycznego aktualizatora.
+Back up the existing repository. Upload the **contents of repository**, not its parent folder. Preserve existing update manifests and previous releases. Review name conflicts before replacing files. This package does not activate the automatic updater.
 
-Można użyć GitHub Desktop lub przesyłania plików w przeglądarce. Folder docs zawiera stronę, grafiki, gotową wersję Web w play i ZIP-y w downloads. Pliki działają również pod ścieżką /updates/.
+Use GitHub Desktop or the browser upload interface. The docs folder contains the website, screenshots, the web build in play and packages in downloads. No libraries, API keys or build service are required.
 
-## 2. Strona
+## 2. Website
 
-W repozytorium wybierz Settings → Pages → Build and deployment → Source: Deploy from a branch. Wybierz gałąź zawierającą te pliki (zwykle main) i folder /docs, następnie Save. Po zakończeniu publikacji planowany adres to https://aeren-game.github.io/updates/.
+Open Settings → Pages → Build and deployment → Source: Deploy from a branch. Choose the branch containing these files (usually main), select /docs and Save. The expected address is https://aeren-game.github.io/updates/.
 
-Instrukcja GitHuba: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+Official instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
-Przy innej nazwie właściciela/repozytorium zmień dwa adresy w README.md. Sama strona używa ścieżek względnych. Nie wymaga zewnętrznych bibliotek, kluczy API ani procesu kompilacji.
+For a different owner/repository, update README.md and the link in docs/404.html. The main website uses relative paths.
 
-## 3. Wydanie
+## 3. Release
 
-Otwórz Releases → Draft a new release. Ustaw tag **v1.0.0-rc2**, tytuł **AEREN 1.0.0 RC2 — Kroniki otchłani**. Wklej treść RELEASE.md i zaznacz **Set as a pre-release**. Dołącz cztery pliki z docs/downloads: Windows ZIP, Web ZIP oraz dwie sumy SHA-256. Opublikuj dopiero po sprawdzeniu podglądu.
+Select Releases → Draft a new release. Use tag **v1.0.0-rc2**, title **AEREN 1.0.0 RC2 — Chronicles of the Abyss** and the text from RELEASE.md. Mark **Set as a pre-release**. Attach all four files from docs/downloads: the Windows and Web ZIPs and their SHA-256 files.
 
-Nie oznaczaj tego wydania jako finalne 1.0.0. Wbudowany numer gry nadal wynosi 1.0.0; RC2 identyfikuje build i tag dystrybucyjny.
+If RC2 has already been published, use a new tag such as v1.0.0-rc2-en instead of silently replacing files; update the README download link accordingly. Do not mark this as a final 1.0.0 release.
 
-## 4. Po publikacji
+## 4. After publishing
 
-Otwórz stronę, przełącz mapy, powiększ grafikę, pobierz oba ZIP-y i porównaj ich SHA-256. Uruchom wersję Web i sprawdź zapis po odświeżeniu. Sprawdź link Windows w README. Nie usuwaj działającego starego wydania, zanim nowa paczka nie przejdzie kontroli.
+Open the website, switch worlds, enlarge images and download both ZIPs. Verify their SHA-256 checksums. Start the Web edition and check saving after reload. Check the README download link. Keep the previous release until the new one passes validation.
 
-Nie dodawaj całego workspace, prywatnych zapisów, kopii profili ani folderów work i narzędzi developerskich. Pełny projekt źródłowy nie jest częścią tej publikacji, ale kod wykonywalny wersji Web jest z natury dostępny przeglądarce.
+Never upload the full workspace, private profiles or development/test folders. This distribution does not include the development project; executable Web code is necessarily accessible to browsers.

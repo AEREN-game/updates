@@ -7193,6 +7193,18 @@ odnowienie|cooldown|Abklingzeit
  const S=A.Save,P=A.UI.prototype,G=A.Game.prototype,B=window.AEREN_RELEASE,K=window.AEREN_STORAGE;
  A.Build=B;A.Data.version=B.gameVersion;document.title='AEREN '+B.gameVersion+' Release Candidate';
  A.Locale.add(`
+Po zdobyciu|On acquisition|Beim Erhalt
+Odblokowuje tę umiejętność.|Unlocks this ability.|Schaltet diese Fähigkeit frei.
+NOWA UMIEJĘTNOŚĆ|NEW ABILITY|NEUE FÄHIGKEIT
+Strzałki wybierają kartę · Enter zatwierdza. Następnie wybierzesz wyposażenie. Limit: 4 zaklęcia samoczynne, 3 aktywne, 8 talentów i 2 dary legendarne.|Arrow keys select a card · Enter confirms. Next, choose equipment. Limits: 4 automatic spells, 3 active abilities, 8 talents and 2 legendary gifts.|Pfeiltasten wählen eine Karte · Enter bestätigt. Danach wählst du Ausrüstung. Limits: 4 automatische Zauber, 3 aktive Fähigkeiten, 8 Talente und 2 legendäre Gaben.
+Pokaż / ukryj szczegóły kart|Show / hide card details|Kartendetails anzeigen / ausblenden
+Przeskok na dodatkowe cele|Chains to additional targets|Sprünge zu zusätzlichen Zielen
+Co 5. atak: rozszczepiona salwa|Every 5th attack: split volley|Jeder 5. Angriff: geteilte Salve
+pozostało|remaining|übrig
+Przedmioty nie zajmują nieskończonego plecaka. Gdy miejsca są pełne, wybierasz co zastąpić. Przelosowania są zapisywane.|Equipment slots are limited. When full, choose what to replace. Rerolls are saved.|Ausrüstungsplätze sind begrenzt. Sind sie voll, wählst du einen Ersatz. Neuwürfe werden gespeichert.
+Darmowe przelosowanie|Free reroll|Kostenloser Neuwurf
+Kuźnia|Forge|Schmiede
+
 Profil i pomoc|Profile and help|Profil und Hilfe
 Przywróć ustawienia domyślne|Restore default settings|Standardeinstellungen wiederherstellen
 Kopia profilu|Export profile backup|Profilsicherung exportieren
@@ -7207,12 +7219,12 @@ Raport diagnostyczny znajdziesz w ustawieniach.|A diagnostic report is available
 To lokalne wydanie Release Candidate. Automatyczne aktualizacje nie są jeszcze udostępnione. Nową paczkę instaluj ręcznie; zapis pozostaje na tym komputerze.|This is a local Release Candidate. Automatic updates are not available yet. Install new packages manually; your save stays on this computer.|Dies ist ein lokaler Release Candidate. Automatische Updates sind noch nicht verfügbar. Installiere neue Pakete manuell; dein Spielstand bleibt auf diesem Computer.
 `);
  const ranges={scale:[.5,1.5,1],particles:[0,1,1],shake:[0,1,.6],master:[0,1,.55],music:[0,1,.25],sfx:[0,1,.65],hudOpacity:[.65,1,.94],flash3:[0,1,1],damageSize3:[.8,1.8,1],playerFX3:[.15,1,.85],statusSize3:[.75,2,1]};
- const defaults={auto:true,autoAim:true,numbers:true,hudLayout:'auto',hudSize:'medium',hudAlign:'center',lowHP:'subtle',weaponStats:true,enemyOutline3:true,altThreat3:false,skillAim3:false,pauseChoices3:true,threat3:'standard',history3:true,cues3:true,lowFX:false,language:'pl',bindings:{}};
+ const defaults={auto:true,autoAim:true,numbers:true,hudLayout:'auto',hudSize:'medium',hudAlign:'center',lowHP:'subtle',weaponStats:true,enemyOutline3:true,altThreat3:false,skillAim3:false,pauseChoices3:true,threat3:'standard',history3:true,cues3:true,lowFX:false,language:'en',bindings:{}};
  for(const [key,range]of Object.entries(ranges))defaults[key]=range[2];
  function settings(){const s=S.data.settings;for(const [key,[min,max,fallback]]of Object.entries(ranges)){const n=Number(s[key]);s[key]=Number.isFinite(n)?Math.max(min,Math.min(max,n)):fallback;}for(const [key,values]of Object.entries({hudLayout:['auto','classic','round'],hudSize:['small','medium','large'],hudAlign:['left','center','right'],lowHP:['full','subtle','off'],threat3:['standard','high','max'],language:['pl','en','de']}))if(!values.includes(s[key]))s[key]=defaults[key];for(const [key,value]of Object.entries(defaults))if(typeof value==='boolean'&&typeof s[key]!=='boolean')s[key]=value;if(!s.bindings||typeof s.bindings!=='object'||Array.isArray(s.bindings))s.bindings={};delete s.bindings.debug;}
  let transaction=false;
  function atomic(action){if(transaction)return action();let before;try{before=K.capture();localStorage.setItem(K.journal,JSON.stringify(before));transaction=true;const ok=action();if(ok===false)throw Error('save');K.validate(K.capture());localStorage.removeItem(K.journal);S.error=false;return ok;}catch(e){S.error=true;if(before)try{K.restore(before);localStorage.removeItem(K.journal);}catch(ignored){}A.game?.ui?.toast('Nie udało się zapisać postępu','Poprzedni zapis został zachowany. Sprawdź wolne miejsce.');return false;}finally{transaction=false;}}
- const load=S.load;S.load=function(){const d=load.call(this);settings();d.gameVersion=B.gameVersion;d.saveSchemaVersion=1;d.buildId=B.buildId;return d;};
+ const load=S.load;S.load=function(){const fresh=!K.keys.some(key=>localStorage.getItem(key)!==null);const d=load.call(this);if(fresh)d.settings.language='en';settings();d.gameVersion=B.gameVersion;d.saveSchemaVersion=1;d.buildId=B.buildId;return d;};
  for(const method of ['write','writeMeta23','writeRun','clearRun']){const old=S[method];S[method]=function(...args){if(method==='write')settings();if(method==='writeRun')args[0]={...args[0],gameVersion:B.gameVersion,saveSchemaVersion:2,buildId:B.buildId};return atomic(()=>old.apply(this,args));};}
  // Public builds retain developer source externally, but expose no debug controls.
  A.Controls.rows.splice(0,A.Controls.rows.length,...A.Controls.rows.filter(row=>row[0]!=='debug'));const tap=A.Controls.tap;A.Controls.tap=function(input,id){return id==='debug'?false:tap.call(this,input,id);};
@@ -7231,7 +7243,7 @@ To lokalne wydanie Release Candidate. Automatyczne aktualizacje nie są jeszcze 
   if(saved){const target=[...panel.querySelectorAll('[data-action],[data-setting]')].find(e=>saved.setting?e.dataset.setting===saved.setting:saved.action&&e.dataset.action===saved.action&&e.dataset.value===saved.value);target?.focus({preventScroll:true});panel.scrollTop=saved.panel;this.overlay.scrollTop=saved.overlay;window.scrollTo(saved.x,saved.y);}
  };
  const menu=P.menu;P.menu=function(...args){menu.apply(this,args);this.overlay.querySelector('main')?.insertAdjacentHTML('beforeend','<p class="hint">AEREN '+B.gameVersion+' · Release Candidate</p>');};
- const action=P.action;P.action=function(id,value){if(id==='updates'){this.panel('Aktualizacje','AEREN '+B.gameVersion,'<p>To lokalne wydanie Release Candidate. Automatyczne aktualizacje nie są jeszcze udostępnione. Nową paczkę instaluj ręcznie; zapis pozostaje na tym komputerze.</p>','menu');return;}if(id==='defaults100'){S.data.settings={...defaults,bindings:{}};S.write();A.Locale?.set('pl');this.settings(this.settingsBack23||'menu');return;}if(id==='backup100'){K.download('AEREN-profil.json',K.capture());return;}if(id==='diagnostics100'){K.download('AEREN-diagnostyka.json',A.diagnostic100());return;}return action.call(this,id,value);};
+ const action=P.action;P.action=function(id,value){if(id==='updates'){this.panel('Aktualizacje','AEREN '+B.gameVersion,'<p>To lokalne wydanie Release Candidate. Automatyczne aktualizacje nie są jeszcze udostępnione. Nową paczkę instaluj ręcznie; zapis pozostaje na tym komputerze.</p>','menu');return;}if(id==='defaults100'){S.data.settings={...defaults,bindings:{}};S.write();A.Locale?.set('en');this.settings(this.settingsBack23||'menu');return;}if(id==='backup100'){K.download('AEREN-profil.json',K.capture());return;}if(id==='diagnostics100'){K.download('AEREN-diagnostyka.json',A.diagnostic100());return;}return action.call(this,id,value);};
  let lastError=null;
  A.diagnostic100=()=>({...B,platform:navigator.platform,viewport:{width:innerWidth,height:innerHeight},state:A.game?.state||'startup',error:lastError,modules:'runtime',date:new Date().toISOString()});
  A.reportError100=function(error){lastError={type:String(error?.name||'Error').slice(0,50),code:'AEREN-RUNTIME'};if(A.game){if(A.game.state==='playing')A.game.pause();A.game.ui.toast('Wstrzymano grę z powodu błędu','Zapisz raport diagnostyczny w ustawieniach.');}};

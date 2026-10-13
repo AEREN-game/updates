@@ -1,12 +1,45 @@
-AEREN 1.0.0 Release Candidate
+# Getting started
 
-Udostępnij cały folder na serwerze statycznym i otwórz index.html w aktualnym Edge lub Chrome. Obsługiwany jest także podkatalog hostingu. Otwarcie pliku index.html bez serwera zależy od ograniczeń przeglądarki.
-Zalecane okno 1280×720 lub większe; minimum testowe 800×600. Minimalne wymagania sprzętowe CPU/RAM nie zostały jeszcze określone na osobnym słabym komputerze.
+## Windows
 
-WASD: ruch; celowanie myszą; Q/E/R: umiejętności; PPM: zdolność postaci; F: moc; Spacja: unik; V: mikstura; C: interakcja; TAB: ekwipunek; Esc: pauza; F11: pełny ekran. Atak automatyczny domyślnie aktywny. Przypisania zmienisz w ustawieniach. Menu: strzałki i Enter. Kontroler — eksperymentalny.
+Download AEREN-1.0.0-Windows-x64.zip, extract the entire archive into a new folder and launch AEREN.exe. Do not run it from inside the ZIP.
 
-Zapis: pamięć przeglądarki dla adresu strony; zmiana hostingu oznacza osobny profil. Kopia: Ustawienia → Kopia profilu. W Windows można dodatkowo skopiować cały folder Aeren po zamknięciu gry. Zapisów nie ma w paczce. Postęp z wersji 2.x zachowuje ten sam schemat; przed pierwszym wczytaniem powstaje lokalna kopia. Uszkodzony profil otwiera ekran odzyskiwania zamiast automatycznego resetu.
+Requires Windows 10/11 x64, .NET Framework 4.6.2 or later, and Microsoft Edge WebView2 Runtime. The EXE is unsigned. Verify its source and SHA-256 checksum; do not disable system protections.
 
-Gra działa offline po dostępności plików i wymaganych składników. Automatyczne aktualizacje nie są jeszcze udostępnione. Wersję 1.0.0 instaluj ręcznie do osobnego folderu; stary aktualizator 2.x traktuje niższy numer jako starszą wersję.
-Błąd: opisz autorowi, co się wydarzyło, i dołącz raport z Ustawienia → Raport diagnostyczny. Raport i historia pozostają lokalnie; nie są wysyłane automatycznie.
-Ograniczenia RC: pełny raport gotowości dostarcza autor wraz z wydaniem. Balans i wydajność na słabszych komputerach wymagają testów graczy.
+The EXE embeds the game and prepares its local components. Saves are stored under %LOCALAPPDATA%\Aeren, not in the installation folder.
+
+## Browser
+
+Select “Play in your browser” on the website. Use a current Edge or Chrome on a computer with a keyboard and mouse. The website works on phones; game controls require a computer. Recommended window: 1280 × 720 or larger. 800 × 600 was also tested. Minimum CPU/RAM requirements have not yet been established.
+
+## Controls
+
+| Action | Default input |
+|---|---|
+| Move | WASD |
+| Aim | Mouse |
+| Abilities | Q / E / R |
+| Hero ability | Right mouse button |
+| Ultimate | F |
+| Dodge | Space |
+| Potion | V |
+| Interact | C |
+| Equipment | Tab |
+| Pause | Esc |
+| Full screen | F11 |
+
+Automatic attacks are enabled by default. Customize bindings and auto-aim in Settings. Use arrow keys and Enter in menus. Controller support is experimental.
+
+## Your first run
+
+Choose an available hero and difficulty. Collect experience, avoid marked attacks and explore interactable objects. On level-up, choose an ability, then equipment. Weapons have three slots including your starting weapon; passive items have six slots. Equipment shops appear after rounds. Run gold is separate from permanent account currencies.
+
+## Language and saves
+
+New profiles start in English. Existing profiles keep their selected language. Change it in Settings. Before updating, use Settings → Export profile backup. On Windows, you can also copy %LOCALAPPDATA%\Aeren after closing the game. Install updates into a separate folder.
+
+Browser saves belong to the website origin. Windows, local previews and GitHub Pages do not automatically share progress. Clearing browser data can delete saves. Automatic updates are disabled in this release.
+
+## Report a problem
+
+Include your build, hero, map, reproduction steps and expected result. Optionally attach a screenshot and Settings → Diagnostic report. Do not publish your private profile.

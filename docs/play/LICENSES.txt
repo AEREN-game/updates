@@ -1,10 +1,10 @@
-AEREN 1.0.0 — informacje o składnikach
+AEREN 1.0.0 — component notices
 
-Kod i proceduralne grafiki, animacje, ikony, efekty dźwiękowe oraz muzyka powstały w projekcie AEREN. Nie dołączono zewnętrznych nagrań ani plików fontów. Fonty Georgia, Arial i system-ui są odczytywane z systemu użytkownika.
-Atlas HUD: wygenerowany narzędziem OpenAI imagegen z referencji dostarczonej przez autora projektu (referencja również opisana przez autora jako wygenerowana z agentem). Plik: assets/hud-reference-frames.png. Nie jest to zasób pobrany z biblioteki innej gry. Brak zidentyfikowanej zewnętrznej licencji wymagającej atrybucji dla tego atlasu.
-Nie udziela się tą informacją dodatkowej licencji na redystrybucję całej gry; prawa do wydania określa autor projektu.
+Game code, procedural art, animation, icons, sound effects and music were created within the AEREN project. No external audio recordings or font files are bundled. Georgia, Arial and system-ui are provided by the operating system.
 
-Windows: Microsoft Edge WebView2 SDK 1.0.4258.31, autor Microsoft Corporation, źródło NuGet Microsoft.Web.WebView2. Licencja BSD-3-Clause zgodnie z LICENSE.txt dostarczonym w SDK: dozwolone użycie komercyjne i redystrybucja pod warunkiem zachowania poniższego tekstu; bez prawa sugerowania poparcia Microsoft. Runtime Evergreen instalowany osobno, nie jest dołączany.
+HUD atlas: generated with OpenAI imagegen from a reference supplied by the project author, also described as agent-generated. File: assets/hud-reference-frames.png. No third-party attribution requirement has been identified for this atlas. This notice does not grant an additional license to redistribute the entire game; the project author determines distribution rights.
+
+Windows uses Microsoft Edge WebView2 SDK 1.0.4258.31 by Microsoft Corporation, from NuGet Microsoft.Web.WebView2. The SDK license and notices follow. The Evergreen Runtime is installed separately and is not bundled.
 
 Copyright (C) Microsoft Corporation. All rights reserved.
 

@@ -1,36 +1,34 @@
-# AEREN · Kroniki otchłani
+# AEREN · Chronicles of the Abyss
 
-**Dark fantasy • walka z hordami • rozwój buildu • RIFT**
+**Dark fantasy • enemy hordes • evolving builds • RIFT**
 
-![Rozgrywka AEREN](docs/assets/world-1.jpg)
+![AEREN gameplay](docs/assets/world-1.jpg)
 
-Wybierz bohatera, przetrwaj kolejne rundy i połącz umiejętności z wyposażeniem. Każdy awans to dwa wybory: rozwój zdolności oraz przedmiot lub broń. Po wyprawie wróć do Sanktuarium i przygotuj następną próbę.
+Choose a hero, survive each round and combine abilities with equipment. Every level brings two choices: an ability upgrade, then an item or weapon. Return to the Sanctuary and prepare your next attempt.
 
-**Wydanie: 1.0.0 Release Candidate 2 · build 2026-10-13-rc2.** To wersja do testów, nie wydanie finalne.
+**1.0.0 Release Candidate 2 — English distribution.** A test release, not a final release. New profiles start in English; existing language preferences are preserved.
 
-## Zagraj
+## Play
 
-- [Pobierz Windows x64](https://github.com/AEREN-game/updates/releases/download/v1.0.0-rc2/AEREN-1.0.0-Windows-x64.zip)
-- [Strona gry i wersja przeglądarkowa](https://aeren-game.github.io/updates/)
-- [Paczki w repozytorium](docs/downloads/) — dostępne również przed utworzeniem wydania.
-- [Instalacja, sterowanie i zapisy](PLAYER-GUIDE.md)
+- [Download Windows x64](https://github.com/AEREN-game/updates/releases/download/v1.0.0-rc2/AEREN-1.0.0-Windows-x64.zip)
+- [Website and browser edition](https://aeren-game.github.io/updates/)
+- [Packages in this repository](docs/downloads/) — also available before a GitHub Release is created.
+- [Installation, controls and saves](PLAYER-GUIDE.md)
 
-Link do wydania zadziała po utworzeniu tagu **v1.0.0-rc2** i dodaniu ZIP-ów. Strona wymaga włączenia GitHub Pages z folderu docs.
+The release link requires the v1.0.0-rc2 tag and uploaded ZIPs. Enable GitHub Pages from docs to publish the website.
 
-## Co znajdziesz w grze
+## Features
 
-- 5 bohaterów: Ilya, Sol, Niva, Orren i Vesper.
-- 6 motywów lokacji: podziemia, lód, las, ogień, wąwóz umarłych i piekło.
-- 45 umiejętności w katalogu oraz 15 broni; do 3 broni i 6 przedmiotów podczas wyprawy.
-- Osobne wybory umiejętności i wyposażenia, ulepszenia oraz synergie.
-- Sanktuarium, Kuźnia, Pamiątki, Kronika wypraw i wyzwania.
-- RIFT, przeklęte relikty i decyzja o zejściu głębiej.
-- Sklepy po rundach, sklep mikstur, zapis lokalny oraz ustawienia PL/EN/DE.
+- Five heroes: Ilya, Sol, Niva, Orren and Vesper.
+- Six world themes: dungeons, ice, forest, fire, the dead and hell.
+- 45 catalog abilities and 15 weapons; up to three weapons and six equipment items per run.
+- Separate ability and equipment choices, upgrades and synergies.
+- Sanctuary, Forge, Keepsakes, run history and challenges.
+- RIFT, cursed relics and the choice to descend deeper.
+- Shops after rounds, a potion shop, local saves and English/Polish/German settings.
 
-## Materiały
+[Changelog](CHANGELOG.md) · [Testing and limitations](TESTING.md) · [Privacy](PRIVACY.md) · [Publishing guide](PUBLISHING.md)
 
-[Galeria i opis gry](https://aeren-game.github.io/updates/) · [Zmiany](CHANGELOG.md) · [Ograniczenia i testy](TESTING.md) · [Prywatność](PRIVACY.md) · [Instrukcja publikacji](PUBLISHING.md)
+Screenshots show the real RC2 runtime. Combat and reward offers were staged in an isolated profile for the showcase; they do not represent a single continuous run.
 
-Zrzuty pochodzą z działającego RC2. Sceny walki i oferty nagród przygotowano do prezentacji w osobnym profilu; nie są zapisem jednej ciągłej wyprawy.
-
-Repozytorium dystrybucyjne zawiera stronę, gotowy build web i paczki gry. Nie zawiera projektu developerskiego, prywatnych zapisów ani środowiska testowego. Warunki komponentów zewnętrznych: [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt). Nie nadano projektowi licencji open source.
+This distribution repository contains the website, playable web build and release packages. It does not include the development workspace, private saves or test environment. Browser code is necessarily accessible to the browser. See [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) for component terms. No open-source license has been assigned to the project.

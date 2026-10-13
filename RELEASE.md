@@ -1,19 +1,17 @@
-# AEREN 1.0.0 RC2 — Kroniki otchłani
+# AEREN 1.0.0 RC2 — Chronicles of the Abyss
 
-Pierwszy publiczny kandydat do wydania AEREN: walka z hordami, pięciu bohaterów, sześć motywów lokacji, rozwój umiejętności i wyposażenia oraz RIFT.
+Dark fantasy action with enemy hordes, five heroes, six world themes, evolving abilities and equipment, and RIFT challenges.
 
-Pobierz paczkę Windows, rozpakuj ją i uruchom AEREN.exe. Wersja przeglądarkowa jest dostępna przez stronę projektu po włączeniu GitHub Pages.
+Download the Windows package, extract it and launch AEREN.exe. The browser edition is available on the project website once GitHub Pages is enabled.
 
-## W tym wydaniu
+This English distribution starts new profiles in English while preserving existing language preferences. Build: 2026-10-13-rc2-en.
 
-Poprawki przewijania ustawień, komunikaty pomocy i odzyskiwania w PL/EN/DE, czyste paczki dystrybucyjne oraz zabezpieczenia zapisu. Wydanie zachowuje dotychczasową rozgrywkę, sklepy i efekty audio.
+## Before playing
 
-## Przed uruchomieniem
+- **Release Candidate — intended for testing, not a final release.**
+- Windows 10/11 x64, .NET Framework 4.6.2+ and WebView2 Runtime required.
+- The EXE is unsigned. SHA-256 checksums are attached.
+- Back up your profile before updating and install into a new folder.
+- Automatic updates are disabled. Balance and performance on weaker hardware need player testing.
 
-- **To Release Candidate — przeznaczony do testów.**
-- Windows 10/11 x64, .NET Framework 4.6.2+ i WebView2 Runtime.
-- EXE nie jest podpisany. Sumy SHA-256 są dołączone do wydania.
-- Przed aktualizacją wykonaj kopię profilu; zainstaluj grę w nowym folderze.
-- Aktualizator automatyczny jest wyłączony. Balans i słabszy sprzęt wymagają testów graczy.
-
-Dokładne sterowanie i sposób zgłaszania problemów: PLAYER-GUIDE.md. Wyniki testów i ograniczenia: TESTING.md.
+See PLAYER-GUIDE.md for controls and TESTING.md for validation and limitations.

@@ -1,6 +1,6 @@
-# Test strony prezentacyjnej
+# Showcase website checks
 
-46 sprawdzeń zakończonych powodzeniem. Test lokalny w Edge pod ścieżką /updates/.
+46 checks passed. Tested locally in Edge under /updates/.
 
 - No horizontal overflow 1440
 - Images loaded 1440
@@ -49,4 +49,4 @@
 - No JS or HTTP errors
 - No external requests
 
-Brak błędów JavaScript, brak błędów pobierania i brak zewnętrznych żądań. Testy wykonano z osobnym profilem. Publikacja na GitHub Pages nie została wykonana; po publikacji trzeba sprawdzić rzeczywisty adres. Nie ponawiano całej macierzy gameplayu, ponieważ ZIP-y i pliki gry pozostały identyczne ze sprawdzonym RC2.
+No JavaScript errors, failed asset requests or external requests. Tests used an isolated profile. GitHub Pages has not been deployed; verify the public address after deployment. Additional English distribution checks are recorded in ENGLISH-TESTS.md.
