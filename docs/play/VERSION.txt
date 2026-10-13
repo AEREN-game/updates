@@ -1,0 +1,6 @@
+AEREN
+Version: 1.0.0
+Build: 2026-10-13-rc2
+Platform: Web
+Release channel: release-candidate
+Save schemas: profile=1, mastery=2, progression=3, run=2

@@ -1,0 +1,6 @@
+AEREN 1.0.0 — Release Candidate
+
+Pięciu bohaterów z osobistymi mocami, automatyczne bronie, umiejętności i synergie. Sześć lokacji, strażnicy, bossowie oraz Szczeliny RIFT. Pamiątki, rozwój bohaterów, sklepy, wyzwania i Kronika wypraw. Lokalne zapisy i kontynuacja wyprawy. Czytelny HUD, konfigurowalne sterowanie i ustawienia widoczności. Oddzielna muzyka menu, lokacji i bossów oraz indywidualne dźwięki zdolności.
+
+Wydanie: ujednolicona publiczna wersja, wyłączony panel deweloperski, ochrona zapisów i odzyskiwanie profilu, eksport diagnostyczny, przywracanie ustawień bez kasowania postępu.
+Platformy: Windows x64 (WebView2) i nowoczesne przeglądarki Chromium.
