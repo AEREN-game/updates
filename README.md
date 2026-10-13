@@ -10,7 +10,7 @@ Choose a hero, survive each round and combine abilities with equipment. Every le
 
 ## Play
 
-- [Download Windows x64](https://github.com/AEREN-game/updates/releases/download/v1.0.0-rc2/AEREN-1.0.0-Windows-x64.zip)
+- [Download Windows x64](https://github.com/AEREN-game/updates/releases/download/v1.0.0-rc2-en/AEREN-1.0.0-Windows-x64.zip)
 - [Website and browser edition](https://aeren-game.github.io/updates/)
 - [Packages in this repository](docs/downloads/) — also available before a GitHub Release is created.
 - [Installation, controls and saves](PLAYER-GUIDE.md)
