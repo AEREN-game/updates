@@ -1,0 +1,32 @@
+{
+  "game": "AEREN",
+  "version": "1.0.1",
+  "gameVersion": "1.0.1",
+  "buildId": "2026-10-14-release",
+  "channel": "stable",
+  "publishedAt": "2026-10-14",
+  "releaseUrl": "https://github.com/AEREN-game/updates/releases/tag/v1.0.1",
+  "website": "https://aeren-game.github.io/",
+  "automaticUpdates": false,
+  "installation": "manual",
+  "saveSchemas": {
+    "profile": 1,
+    "mastery": 2,
+    "progression": 3,
+    "run": 2
+  },
+  "files": [
+    {
+      "name": "AEREN-1.0.1-Windows-x64.zip",
+      "url": "https://github.com/AEREN-game/updates/releases/download/v1.0.1/AEREN-1.0.1-Windows-x64.zip",
+      "bytes": 1540019,
+      "sha256": "d9dc3b610b4ae5ea3b042cb345f72754c3671f95e76e6ff0aa0389730c79c4b7"
+    },
+    {
+      "name": "AEREN-1.0.1-Web.zip",
+      "url": "https://github.com/AEREN-game/updates/releases/download/v1.0.1/AEREN-1.0.1-Web.zip",
+      "bytes": 1236835,
+      "sha256": "34dd033baccca7ac13ecb9d735db0d31d6e75d10905b33171b9a910abf52bcdc"
+    }
+  ]
+}

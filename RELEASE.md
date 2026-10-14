@@ -1,17 +1,15 @@
-# AEREN 1.0.0 RC2 — Chronicles of the Abyss
+# AEREN 1.0.1
 
-Dark fantasy action with enemy hordes, five heroes, six world themes, evolving abilities and equipment, and RIFT challenges.
+Current Windows and Web release. New profiles start in English; existing language preferences and save schemas are preserved.
 
-Download the Windows package, extract it and launch AEREN.exe. The browser edition is available on the project website once GitHub Pages is enabled.
+- RIFT supports all unlocked heroes and selected difficulty, including the actual run start.
+- Round loot attraction resets for subsequent rounds and expeditions.
+- Includes the recent menu scrolling, death handling, end-of-expedition, shops, HUD and localization fixes.
 
-This English distribution starts new profiles in English while preserving existing language preferences. Build: 2026-10-13-rc2-en.
+## Install
+Download the Windows ZIP, extract it into a new folder and launch AEREN.exe. Requires Windows 10/11 x64, .NET Framework 4.6.2+ and Microsoft WebView2 Evergreen. Export a profile backup before updating. Updates are manual; latest.json describes the current downloads and SHA-256 checksums. Existing 2.x launchers do not automatically migrate to 1.x.
 
-## Before playing
+Play online: https://aeren-game.github.io/play-index.html
 
-- **Release Candidate — intended for testing, not a final release.**
-- Windows 10/11 x64, .NET Framework 4.6.2+ and WebView2 Runtime required.
-- The EXE is unsigned. SHA-256 checksums are attached.
-- Back up your profile before updating and install into a new folder.
-- Automatic updates are disabled. Balance and performance on weaker hardware need player testing.
-
-See PLAYER-GUIDE.md for controls and TESTING.md for validation and limitations.
+## Validation and limitations
+54 Web checks, 9 migration checks, 27 localization/recovery checks, 36 scroll/focus checks, gameplay regression suites and native clean/moved-folder startup tests passed. RIFT launch was tested with Vesper on Easy. EXE is unsigned. Long performance/stress suites and external hardware testing were not repeated for this release.
